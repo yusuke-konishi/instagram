@@ -1,7 +1,8 @@
 <h1>写真一覧</h1>
 
-<% @pictures.each do |picture| %>
+  <% @pictures.each do |picture| %>
   <p>キャプション: <%= picture.caption %></p>
+  <%= link_to "投稿を編集する", edit_picture_path(picture.id) %>
 <% end %>
 
 <%= link_to "写真を投稿する", new_picture_path %>
