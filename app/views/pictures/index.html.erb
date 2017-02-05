@@ -1,2 +1,7 @@
-<h1>Pictures#index</h1>
-<p>Find me in app/views/pictures/index.html.erb</p>
+<h1>写真一覧</h1>
+
+<% @pictures.each do |picture| %>
+  <p>キャプション: <%= picture.caption %></p>
+<% end %>
+
+<%= link_to "写真を投稿する", new_picture_path %>
