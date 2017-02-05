@@ -1,4 +1,6 @@
 class PicturesController < ApplicationController
+  before_action :set_picture, only: [:edit, :update, :destroy]
+
   def index
     @pictures = Picture.all
   end
@@ -8,7 +10,6 @@ class PicturesController < ApplicationController
   end
 
   def create
-    #Picture.create(pictures_params)
     @picture = Picture.new(pictures_params)
     if @picture.save
       redirect_to pictures_path, notice: "写真を投稿しました！"
@@ -18,26 +19,27 @@ class PicturesController < ApplicationController
   end
 
   def edit
-    @picture = Picture.find(params[:id])
   end
 
   def update
-    @picture = Picture.find(params[:id])
     if @picture.update(pictures_params)
-      redirect_to pictures_path, notice: "投稿を更新しました！"
+      redirect_to pictures_path, notice: "写真を更新しました！"
     else
       render 'edit'
     end
   end
 
   def destroy
-    @picture = Picture.find(params[:id])
     @picture.destroy
-    redirect_to pictures_path, notice: "投稿を削除しました！"
+    redirect_to pictures_path, notice: "写真を削除しました！"
   end
 
   private
     def pictures_params
       params.require(:picture).permit(:image, :caption)
+    end
+
+    def set_picture
+      @picture = Picture.find(params[:id])
     end
 end
