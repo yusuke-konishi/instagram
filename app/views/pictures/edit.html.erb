@@ -1,6 +1,10 @@
 <div class="container">
   <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
     <h2>写真を編集する</h2>
+    <div class="clearfix">
+      <p class="pull-left" id="profile-img"><%= profile_img(@picture.user) if profile_img(@picture.user) %></p>
+      <p class="text-left"><%= @picture.user.name %></p>
+    </div>
     <%= render 'form' %>
   </div>
 </div>
