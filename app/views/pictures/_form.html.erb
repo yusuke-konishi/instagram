@@ -1,6 +1,7 @@
 <%= form_for(@picture) do |f| %>
   <%= f.error_messages! %>
 
+  <p><%= image_tag(@picture.image.thumb) %></p>
   <%= f.file_field :image %>
   <%= f.hidden_field :image_cache %><br>
 

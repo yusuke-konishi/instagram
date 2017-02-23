@@ -9,10 +9,6 @@ module ApplicationHelper
     end
     image_tag(img_url, alt: user.name)
   end
-
-  def post_img(picture)
-    return image_tag(picture.image)
-  end
 end
 
 module ActionView
