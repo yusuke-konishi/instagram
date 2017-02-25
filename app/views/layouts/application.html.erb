@@ -10,7 +10,7 @@
 <body>
 
   <header>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -25,9 +25,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "検索", root_path %></li>
-            <li><%= link_to "カメラ", root_path %></li>
-            <li><%= link_to "通知", root_path %></li>
+            <li><%= link_to "投稿", new_picture_path %></li>
             <% if user_signed_in? %>
               <li><%= link_to 'マイページ', edit_user_registration_path %></li>
               <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>

@@ -4,29 +4,31 @@
 
 header {
   width: 100%;
-  background-color: #2c3e50;
-  height: 54px;
+  //background-color: #fafafa;
+  height: 50px;
 }
 
 .navbar-default {
     border: 0;
 }
 .navbar {
-    background-color: transparent;
-    color: white;
+    background-color: #fafafa;
+    //color: grey;
     margin-bottom: 0px;
 }
 .navbar-default {
   .navbar-brand {
-    color: #ccc;
+    color: #555;
     &:hover {
-      color: white;
+      color: #111;
+      text-decoration: underline;
     }
   }
   .navbar-nav > li > a {
-    color: #ccc;
+    color: #555;
     &:hover, &:focus {
-      color: white;
+      color: #111;
+      text-decoration: underline;
     }
   }
   .navbar-nav > .open > a {
@@ -56,9 +58,9 @@ header {
 
 footer {
   width: 100%;
-  background-color:#2c3e50;
+  background-color:#fafafa;
   padding: 20px 0 10px 0;
-  color: white;
+  color: #555;
   margin: auto;
   padding-bottom: 10px;
   font-size: 12px;
