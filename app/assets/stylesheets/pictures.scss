@@ -81,7 +81,8 @@ body {
   margin-bottom: 74px;
   padding: 20px 20px 20px 35px;
   .row {
-    border-bottom: 1px solid #ccc;
+    border: 1px solid #ccc;
+    margin-top: 20px;
     padding: 20px;
     text-align: left;
     word-wrap: break-word;
@@ -121,4 +122,10 @@ input[type="submit"].btn-block{
 .flash {
   color: gray;
   padding-top: 10px;
+}
+
+// 投稿欄のプロフィール画像
+#profile-img{
+  height: 40px;
+  width: 40px;
 }
